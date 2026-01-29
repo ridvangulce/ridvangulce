@@ -1,1 +1,186 @@
-{"name":"RG","resume_name":"Rıdvan Gülçe","headerTaglineOne":"Hello 👋","headerTaglineTwo":"I'm Rıdvan Gülçe - curious","headerTaglineThree":"developer","headerTaglineFour":" based in Istanbul, Turkiye.","showCursor":true,"showBlog":false,"darkMode":true,"showResume":true,"socials":[{"id":"1","title":"Github","link":"https://github.com/ridvangulce"},{"id":"2","title":"LinkedIn","link":"https://www.linkedin.com/in/ridvangulce/"},{"id":"3","title":"Twitter","link":"https://twitter.com/ridvangulce"},{"id":"5","title":"Email","link":"mailto:ridvangulce@gmail.com"}],"projects":[{"id":"1","title":"Rampage","description":"E-commerce","imageSrc":"https://firebasestorage.googleapis.com/v0/b/resume-react-a28a3.appspot.com/o/images%2FScreenshot%202024-09-09%20at%2020.55.37.png?alt=media&token=33b794bd-9b99-4e9c-86eb-4b9f0fb3eff6","url":"https://www.rampage.com.tr/"},{"id":"2","title":"Viport","description":"E-commerce","imageSrc":"https://firebasestorage.googleapis.com/v0/b/resume-react-a28a3.appspot.com/o/images%2Fviport.png?alt=media&token=7d4d8fb5-1de7-440b-8d78-55ae09248a91","url":"http://demo.biltektasarim.com?site=transfer1"},{"id":"3","title":"ARC Water","description":"Product Promotion","imageSrc":"https://firebasestorage.googleapis.com/v0/b/resume-react-a28a3.appspot.com/o/images%2FScreenshot%202024-09-09%20at%2021.03.03.png?alt=media&token=915dbac8-df6b-4faf-8abe-976ad6b2111c","url":"https://www.arcwater.com.tr/"},{"id":"4","title":"NFA","description":"E-commerce","imageSrc":"https://firebasestorage.googleapis.com/v0/b/resume-react-a28a3.appspot.com/o/images%2FScreenshot%202024-09-09%20at%2021.09.30.png?alt=media&token=01b9fc96-b5c5-4fca-8040-f52911bb1f1e","url":"http://demo.biltektasarim.com/?site=nfa"},{"id":"5","title":"Dumanoğlu Energy","description":"Product Promotion","imageSrc":"https://firebasestorage.googleapis.com/v0/b/resume-react-a28a3.appspot.com/o/images%2FScreenshot%202024-09-09%20at%2021.19.50.png?alt=media&token=e5cff987-1b99-467a-a7da-8f34046be30c","url":"https://www.dumanogluenerji.com"},{"id":"6","title":"Hidea","description":"Product Promotion","imageSrc":"https://firebasestorage.googleapis.com/v0/b/resume-react-a28a3.appspot.com/o/images%2FScreenshot%202024-09-10%20at%2017.32.54.png?alt=media&token=7b13490c-95c5-4093-b11e-b6f3d3b134b9","url":"https://www.hidea.com.tr/tr"},{"id":"11028ee0-9d7a-4830-8540-43205f1d72e2","title":"OXO Tracker","description":"Product Promotion","imageSrc":"https://firebasestorage.googleapis.com/v0/b/resume-react-a28a3.appspot.com/o/images%2FEkran%20Resmi%202024-09-11%2012.06.46.png?alt=media&token=10132fd0-dfe5-4c67-a289-b60cd263bc4f","url":"https://www.oxotracker.com/"},{"id":"80a4270d-5879-446e-9fa6-f2eb0fa6edce","title":"Oxy Word Psa","description":"Product Promotion","imageSrc":"https://firebasestorage.googleapis.com/v0/b/resume-react-a28a3.appspot.com/o/images%2FEkran%20Resmi%202024-09-11%2012.10.22.png?alt=media&token=96b4f4d3-1b6b-4701-94d0-9a151ec566b4","url":"http://demo.biltektasarim.com/?site=medisam"},{"id":"8dfe1c5c-0a9c-4a7f-8045-04bae8085985","title":"Carina Rugs","description":"Product Promotion","imageSrc":"https://firebasestorage.googleapis.com/v0/b/resume-react-a28a3.appspot.com/o/images%2FEkran%20Resmi%202024-09-11%2012.12.43.png?alt=media&token=4ed9da1b-cbfb-441d-92b5-c762f148a658","url":"https://www.carinarugs.com/"},{"id":"4983910b-9aa0-45ad-9d99-830bdf7c1e6b","title":"Carina","description":"Product Promotion","imageSrc":"https://firebasestorage.googleapis.com/v0/b/resume-react-a28a3.appspot.com/o/images%2FEkran%20Resmi%202024-09-11%2012.15.17.png?alt=media&token=68b170f0-c30d-4993-a1fb-fff961e98549","url":"http://demo.biltektasarim.com/?site=carina"},{"id":"a745f910-0ba5-4c94-82b0-91e88a90e890","title":"Duca Pump","description":"Product Promotion","imageSrc":"https://firebasestorage.googleapis.com/v0/b/resume-react-a28a3.appspot.com/o/images%2FEkran%20Resmi%202024-09-11%2012.19.05.png?alt=media&token=9d3429b3-774a-49b3-8c78-10bfb0e0890b","url":"https://www.ducapump.com/tr"}],"services":[{"id":"1","title":"API Development","description":"Specialize in building robust and scalable APIs, ensuring seamless integration between the front-end and back-end of your application."},{"id":"2","title":"Database Management","description":"Design and manage efficient databases, ensuring data security, integrity, and optimization to keep your application running smoothly."},{"id":"3","title":"Server-Side Development","description":"Handle all aspects of server-side programming, ensuring your applications perform at their best, with a focus on speed, reliability, and scalability."}],"aboutpara":"As a passionate and driven software developer, I bring a versatile skill set across both front-end and back-end web development. With a strong foundation in building efficient and scalable applications, I continuously seek opportunities to enhance my expertise and stay ahead in the ever-changing tech landscape.\n\nEager to tackle new challenges, I am committed to crafting innovative solutions that improve user experiences and contribute to impactful projects. Let's collaborate to create something extraordinary in this dynamic world of technology!","resume":{"tagline":"👋  I'm a software developer","description":"As a motivated software developer, I bring a versatile skill set that spans both front-\nend and back-end web development. Well-versed with NodeJS,PHP, MongoDB, Firebase, MySQL, Javascript, ReactJS.","experiences":[{"id":"1","dates":"Sept 2023 - Present","type":"Full Time","position":"Back End Developer at Biltek Design and Software Inc.","bullets":"Worked on numerous corporate promotional and e-commerce website projects, Primarily using PHP | AJAX | MySQL | JavaScript."},{"id":"d495c23b-4f65-479a-9b8a-cfbc1c089725","dates":"Jan 2022 - August 2022","type":"Full Time","position":"Game Developer at MAG Game Studio","bullets":"Developed hyper-casual hybrid-casual and puzzle games, Primarily using Unity | C# | OOP"},{"id":"bab4fedc-b7b5-4d4b-aa9c-81cc88db0131","dates":"Apr 2021 - Sept 2021","type":"Full Time","position":"Full-Stack Developer at CTOCKS.","bullets":"Developed user interfaces and established a connection between database., Primarily using ReactJS | NodeJS | MongoDB"}],"education":{"universityName":"","universityDate":"","universityPara":""},"languages":["Javascript","PHP","C#"],"frameworks":["NodeJS","MongoDB","MySQL","Firebase","Express"],"others":["AJAX","Unity"]}}
+{
+    "name": "RG",
+    "resume_name": "Rıdvan Gülçe",
+    "headerTaglineOne": "Hello 👋",
+    "headerTaglineTwo": "I'm Rıdvan Gülçe - curious",
+    "headerTaglineThree": "developer",
+    "headerTaglineFour": " based in Istanbul, Turkiye.",
+    "showCursor": false,
+    "showBlog": false,
+    "darkMode": true,
+    "showResume": true,
+    "socials": [
+        {
+            "id": "1",
+            "title": "Github",
+            "link": "https://github.com/ridvangulce"
+        },
+        {
+            "id": "2",
+            "title": "LinkedIn",
+            "link": "https://www.linkedin.com/in/ridvangulce/"
+        },
+        {
+            "id": "3",
+            "title": "Email",
+            "link": "mailto:ridvangulce@gmail.com"
+        }
+    ],
+    "projects": [
+        {
+            "id": "0",
+            "title": "Workout Note",
+            "description": "AI-Powered Workout Tracking",
+            "imageSrc": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1470&auto=format&fit=crop",
+            "url": "https://workout-note-rouge.vercel.app/"
+        },
+        {
+            "id": "1",
+            "title": "Rampage",
+            "description": "E-commerce",
+            "imageSrc": "https://firebasestorage.googleapis.com/v0/b/resume-react-a28a3.appspot.com/o/images%2FScreenshot%202024-09-09%20at%2020.55.37.png?alt=media&token=33b794bd-9b99-4e9c-86eb-4b9f0fb3eff6",
+            "url": "https://www.rampage.com.tr/"
+        },
+        {
+            "id": "2",
+            "title": "Viport",
+            "description": "E-commerce",
+            "imageSrc": "https://firebasestorage.googleapis.com/v0/b/resume-react-a28a3.appspot.com/o/images%2Fviport.png?alt=media&token=7d4d8fb5-1de7-440b-8d78-55ae09248a91",
+            "url": "http://demo.biltektasarim.com?site=transfer1"
+        },
+        {
+            "id": "3",
+            "title": "ARC Water",
+            "description": "Product Promotion",
+            "imageSrc": "https://firebasestorage.googleapis.com/v0/b/resume-react-a28a3.appspot.com/o/images%2FScreenshot%202024-09-09%20at%2021.03.03.png?alt=media&token=915dbac8-df6b-4faf-8abe-976ad6b2111c",
+            "url": "https://www.arcwater.com.tr/"
+        },
+        {
+            "id": "4",
+            "title": "NFA",
+            "description": "E-commerce",
+            "imageSrc": "https://firebasestorage.googleapis.com/v0/b/resume-react-a28a3.appspot.com/o/images%2FScreenshot%202024-09-09%20at%2021.09.30.png?alt=media&token=01b9fc96-b5c5-4fca-8040-f52911bb1f1e",
+            "url": "http://demo.biltektasarim.com/?site=nfa"
+        },
+        {
+            "id": "5",
+            "title": "Dumanoğlu Energy",
+            "description": "Product Promotion",
+            "imageSrc": "https://firebasestorage.googleapis.com/v0/b/resume-react-a28a3.appspot.com/o/images%2FScreenshot%202024-09-09%20at%2021.19.50.png?alt=media&token=e5cff987-1b99-467a-a7da-8f34046be30c",
+            "url": "https://www.dumanogluenerji.com"
+        },
+        {
+            "id": "6",
+            "title": "Hidea",
+            "description": "Product Promotion",
+            "imageSrc": "https://firebasestorage.googleapis.com/v0/b/resume-react-a28a3.appspot.com/o/images%2FScreenshot%202024-09-10%20at%2017.32.54.png?alt=media&token=7b13490c-95c5-4093-b11e-b6f3d3b134b9",
+            "url": "https://www.hidea.com.tr/tr"
+        },
+        {
+            "id": "11028ee0-9d7a-4830-8540-43205f1d72e2",
+            "title": "OXO Tracker",
+            "description": "Product Promotion",
+            "imageSrc": "https://firebasestorage.googleapis.com/v0/b/resume-react-a28a3.appspot.com/o/images%2FEkran%20Resmi%202024-09-11%2012.06.46.png?alt=media&token=10132fd0-dfe5-4c67-a289-b60cd263bc4f",
+            "url": "https://www.oxotracker.com/"
+        },
+        {
+            "id": "80a4270d-5879-446e-9fa6-f2eb0fa6edce",
+            "title": "Oxy Word Psa",
+            "description": "Product Promotion",
+            "imageSrc": "https://firebasestorage.googleapis.com/v0/b/resume-react-a28a3.appspot.com/o/images%2FEkran%20Resmi%202024-09-11%2012.10.22.png?alt=media&token=96b4f4d3-1b6b-4701-94d0-9a151ec566b4",
+            "url": "http://demo.biltektasarim.com/?site=medisam"
+        },
+        {
+            "id": "8dfe1c5c-0a9c-4a7f-8045-04bae8085985",
+            "title": "Carina Rugs",
+            "description": "Product Promotion",
+            "imageSrc": "https://firebasestorage.googleapis.com/v0/b/resume-react-a28a3.appspot.com/o/images%2FEkran%20Resmi%202024-09-11%2012.12.43.png?alt=media&token=4ed9da1b-cbfb-441d-92b5-c762f148a658",
+            "url": "https://www.carinarugs.com/"
+        },
+        {
+            "id": "4983910b-9aa0-45ad-9d99-830bdf7c1e6b",
+            "title": "Carina",
+            "description": "Product Promotion",
+            "imageSrc": "https://firebasestorage.googleapis.com/v0/b/resume-react-a28a3.appspot.com/o/images%2FEkran%20Resmi%202024-09-11%2012.15.17.png?alt=media&token=68b170f0-c30d-4993-a1fb-fff961e98549",
+            "url": "http://demo.biltektasarim.com/?site=carina"
+        },
+        {
+            "id": "a745f910-0ba5-4c94-82b0-91e88a90e890",
+            "title": "Duca Pump",
+            "description": "Product Promotion",
+            "imageSrc": "https://firebasestorage.googleapis.com/v0/b/resume-react-a28a3.appspot.com/o/images%2FEkran%20Resmi%202024-09-11%2012.19.05.png?alt=media&token=9d3429b3-774a-49b3-8c78-10bfb0e0890b",
+            "url": "https://www.ducapump.com/tr"
+        }
+    ],
+    "services": [
+        {
+            "id": "1",
+            "title": "API Development",
+            "description": "Specialize in building robust and scalable APIs, ensuring seamless integration between the front-end and back-end of your application."
+        },
+        {
+            "id": "2",
+            "title": "Database Management",
+            "description": "Design and manage efficient databases, ensuring data security, integrity, and optimization to keep your application running smoothly."
+        },
+        {
+            "id": "3",
+            "title": "Server-Side Development",
+            "description": "Handle all aspects of server-side programming, ensuring your applications perform at their best, with a focus on speed, reliability, and scalability."
+        },
+        {
+            "id": "4",
+            "title": "Database Optimization",
+            "description": "Optimize database performance, ensuring your applications run smoothly and efficiently."
+        }
+    ],
+    "aboutpara": "Back-End Developer with 3+ years of professional experience building API-driven backend systems and database-centered applications. Strong focus on SQL performance, clean backend architecture, and production-ready API design using Node.js and PHP . Hands-on experience with raw SQL, query optimization, and backend performance tuning in production environments.",
+    "resume": {
+        "tagline": "👋  I'm a software developer",
+        "description": "As a motivated software developer, I bring a versatile skill set that spans both front-\nend and back-end web development. Well-versed with NodeJS,PHP, MongoDB, Firebase, MySQL, Javascript, ReactJS.",
+        "experiences": [
+            {
+                "id": "1",
+                "dates": "Sept 2023 - Present",
+                "type": "Full Time",
+                "position": "Back End Developer at Biltek Design and Software Inc.",
+                "bullets": "Worked on numerous corporate promotional and e-commerce website projects, Primarily using PHP | AJAX | MySQL | JavaScript."
+            },
+            {
+                "id": "d495c23b-4f65-479a-9b8a-cfbc1c089725",
+                "dates": "Jan 2022 - August 2022",
+                "type": "Full Time",
+                "position": "Game Developer at MAG Game Studio",
+                "bullets": "Developed hyper-casual hybrid-casual and puzzle games, Primarily using Unity | C# | OOP"
+            },
+            {
+                "id": "bab4fedc-b7b5-4d4b-aa9c-81cc88db0131",
+                "dates": "Apr 2021 - Sept 2021",
+                "type": "Full Time",
+                "position": "Full-Stack Developer at CTOCKS.",
+                "bullets": "Developed user interfaces and established a connection between database., Primarily using ReactJS | NodeJS | MongoDB"
+            }
+        ],
+        "education": {
+            "universityName": "",
+            "universityDate": "",
+            "universityPara": ""
+        },
+        "languages": [
+            "Javascript",
+            "PHP",
+            "C#"
+        ],
+        "frameworks": [
+            "NodeJS",
+            "Express",
+            "PostgreSQL",
+            "MySQL",
+            "MongoDB"
+        ],
+        "others": [
+            "AJAX",
+            "Unity"
+        ]
+    }
+}

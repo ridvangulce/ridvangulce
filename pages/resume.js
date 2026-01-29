@@ -33,21 +33,18 @@ const Resume = () => {
       )}
       {data.showCursor && <Cursor />}
       <div
-        className={`container mx-auto mb-10 ${
-          data.showCursor && "cursor-none"
-        }`}
+        className={`container mx-auto mb-10 ${data.showCursor && "cursor-none"
+          }`}
       >
         <Header isBlog />
         {mount && (
           <div className="mt-10 w-full flex flex-col items-center">
             <div
-              className={`w-full ${
-                mount && theme.theme === "dark" ? "bg-slate-800" : "bg-gray-50"
-              } max-w-4xl p-20 mob:p-5 desktop:p-20 rounded-lg shadow-sm`}
+              className={`w-full glass max-w-4xl p-10 mob:p-5 desktop:p-20 rounded-lg shadow-sm transition-all duration-300 transform`}
             >
-              <h1 className="text-3xl font-bold">{resume_name}</h1>
-              <h2 className="text-xl mt-5">{resume.tagline}</h2>
-              <h2 className="w-4/5 text-xl mt-5 opacity-50">
+              <h1 className="text-4xl font-bold text-text-primary">{resume_name}</h1>
+              <h2 className="text-xl mt-5 text-primary font-medium">{resume.tagline}</h2>
+              <h2 className="w-4/5 text-xl mt-5 text-text-secondary opacity-80">
                 {resume.description}
               </h2>
               <div className="mt-2">
@@ -85,10 +82,10 @@ const Resume = () => {
                 <div className="flex mob:flex-col desktop:flex-row justify-between">
                   {resume.languages && (
                     <div className="mt-2 mob:mt-5">
-                      <h2 className="text-lg">Languages</h2>
+                      <h2 className="text-lg text-lg font-bold text-text-primary">Languages</h2>
                       <ul className="list-disc">
                         {resume.languages.map((language, index) => (
-                          <li key={index} className="ml-5 py-2">
+                          <li key={index} className="ml-5 py-2 text-text-secondary">
                             {language}
                           </li>
                         ))}
@@ -98,10 +95,10 @@ const Resume = () => {
 
                   {resume.frameworks && (
                     <div className="mt-2 mob:mt-5">
-                      <h2 className="text-lg">Server Side</h2>
+                      <h2 className="text-lg text-lg font-bold text-text-primary">Server Side</h2>
                       <ul className="list-disc">
                         {resume.frameworks.map((framework, index) => (
-                          <li key={index} className="ml-5 py-2">
+                          <li key={index} className="ml-5 py-2 text-text-secondary">
                             {framework}
                           </li>
                         ))}
@@ -111,10 +108,10 @@ const Resume = () => {
 
                   {resume.others && (
                     <div className="mt-2 mob:mt-5">
-                      <h2 className="text-lg">Others</h2>
+                      <h2 className="text-lg text-lg font-bold text-text-primary">Others</h2>
                       <ul className="list-disc">
                         {resume.others.map((other, index) => (
-                          <li key={index} className="ml-5 py-2">
+                          <li key={index} className="ml-5 py-2 text-text-secondary">
                             {other}
                           </li>
                         ))}

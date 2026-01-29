@@ -1,57 +1,74 @@
-![thumbnail](https://firebasestorage.googleapis.com/v0/b/resume-react-a28a3.appspot.com/o/images%2FScreenshot%202024-09-10%20at%2018.17.05.png?alt=media&token=1d7d8b21-31e7-4626-abc4-55aa950daebe)
+# Premium Developer Portfolio
 
+A high-performance, visually stunning portfolio template built with **Next.js** and **Tailwind CSS**. Designed to showcase your work with a premium "glassmorphism" aesthetic and robust theming.
 
+![Thumbnail](/public/images/thumbnail.png)
 
+## ✨ Features
 
-### Features - 
+- **Premium Design**:
+  - **Glassmorphism UI**: Frosted glass effects on cards and navigation for a modern feel.
+  - **Animations**: Smooth hover effects, entrance animations, and micro-interactions.
+  - **Typography**: Clean, professional look using the **Inter** font family.
+- **Robust Theming**:
+  - **Dual Mode**: Fully supported **Light** and **Dark** modes with seamless switching.
+  - **Semantic CSS**: Powered by CSS variables for consistent styling across the app.
+- **Content Management**:
+  - **Easy Customization**: Edit `data/portfolio.json` to update content without touching code.
+  - **Project Showcase**: Highlight your best work (e.g., *Workout Note*) with rich previews.
+- **Tech Stack**:
+  - [Next.js](https://nextjs.org/)
+  - [Tailwind CSS](https://tailwindcss.com/)
+  - [React](https://reactjs.org/)
 
-- Modern Stack (Next.js + TailwindCSS)
-- Minimal Design
-- Easy To Browse
-- Easy To Customize your details With GUI
-- Blog Crud (Create, Read, Update, Delete blog with easy to use UI).
-- Dark Mode
+## 🚀 Getting Started
 
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/ridvangulce/portfolio.git
+   ```
 
-### Sections
+2. **Install dependencies**:
+   ```bash
+   cd portfolio
+   yarn install
+   # or
+   npm install
+   ```
 
-- Header
-- Work
-- Expertise
-- About
-- Contact
-- Markdown Blog
+3. **Run the development server**:
+   ```bash
+   yarn dev
+   # or
+   npm run dev
+   ```
 
+4. **Build for production**:
+   ```bash
+   yarn build
+   ```
 
-### How To Use
+## 🎨 Customization
 
-- Clone this repo
-- run `yarn`
-- `yarn dev`
+### Content
+Modify `data/portfolio.json` to update:
+- Personal details (Name, Tagline)
+- Projects (Title, Description, Images)
+- Services & Skills
+- Social Links
 
+### Styling
+- **Colors**: Edit global CSS variables in `styles/globals.css`.
+- **Theme**: The app automatically handles system preferences and manual toggles.
 
+## 🤝 Contributing
 
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-### How To Contribute - 
+## 📄 License
 
-I would be very happy to review your PRs and all the awesome things that you can improve on this portfolio.
+This project is open source and available under the [MIT License](LICENSE).
 
+---
 
-### Tech Stack Used - 
-- Next.js
-- TailwindCSS
-
-
-### Thanks
-
-If you liked this portfolio template, don't forget to give it a ⭐.
-
-## Awesome Contributors
-[@ridvangulce](https://github.com/ridvangulce) 
-
-
-
-
-
-
-
+Developed with ❤️ by [Rıdvan Gülçe](https://github.com/ridvangulce)

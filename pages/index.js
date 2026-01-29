@@ -113,7 +113,7 @@ export default function Home() {
         </div>
         <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={workRef}>
           <div className="flex justify-between">
-            <h1 className="text-2xl text-bold">Work.</h1>
+            <h1 className="text-2xl text-bold">Projects</h1>
             <p>Found {data.projects.length} Projects</p>
           </div>
 
@@ -125,9 +125,8 @@ export default function Home() {
                 name={project.title}
                 description={project.description}
                 onClick={() => window.open(project.url)}
-                className={`transition-all transform duration-500 ease-out opacity-0 translate-y-5 ${
-                  index < visibleProjects ? "opacity-100 translate-y-0" : ""
-                }`}
+                className={`transition-all transform duration-500 ease-out opacity-0 translate-y-5 ${index < visibleProjects ? "opacity-100 translate-y-0" : ""
+                  }`}
               />
             ))}
           </div>
@@ -138,7 +137,7 @@ export default function Home() {
               {" "}
               {/* Butonu ortalamak için flex kullanıyoruz */}
               <button
-                className="px-4 py-2 bg-white text-black rounded text-lg py-5 font-bold hover:bg-black hover:text-white transition-all duration-500" 
+                className="px-4 py-2 rounded-lg text-lg font-bold transition-all duration-500 bg-text-primary text-bg-primary hover:bg-bg-secondary hover:text-text-primary hover:scale-105"
                 onClick={showMoreProjects}
               >
                 Show More Projects

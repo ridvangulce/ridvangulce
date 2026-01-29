@@ -39,9 +39,8 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   >
                     <img
                       className="h-6"
-                      src={`/images/${
-                        theme === "dark" ? "moon.svg" : "sun.svg"
-                      }`}
+                      src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"
+                        }`}
                     ></img>
                   </Button>
                 )}
@@ -49,23 +48,21 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                 <Popover.Button>
                   <img
                     className="h-5"
-                    src={`/images/${
-                      !open
+                    src={`/images/${!open
                         ? theme === "dark"
                           ? "menu-white.svg"
                           : "menu.svg"
                         : theme === "light"
-                        ? "cancel.svg"
-                        : "cancel-white.svg"
-                    }`}
+                          ? "cancel.svg"
+                          : "cancel-white.svg"
+                      }`}
                   ></img>
                 </Popover.Button>
               </div>
             </div>
             <Popover.Panel
-              className={`absolute right-0 z-10 w-11/12 p-4 ${
-                theme === "dark" ? "bg-slate-800" : "bg-white"
-              } shadow-md rounded-md`}
+              className={`absolute right-0 z-10 w-11/12 p-4 ${theme === "dark" ? "bg-slate-800" : "bg-white"
+                } shadow-md rounded-md`}
             >
               {!isBlog ? (
                 <div className="grid grid-cols-1">
@@ -119,18 +116,17 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
         )}
       </Popover>
       <div
-        className={`mt-10 hidden flex-row items-center justify-between sticky ${
-          theme === "light" && "bg-white"
-        } dark:text-white top-0 z-10 tablet:flex`}
+        className={`mt-10 hidden flex-row items-center justify-between sticky top-0 z-50 tablet:flex p-4 rounded-2xl transition-all duration-300 ${theme === "light" ? "glass shadow-sm" : "glass"
+          } dark:text-white`}
       >
         <h1
           onClick={() => router.push("/")}
-          className="font-medium text-4xl cursor-pointer mob:p-2 laptop:p-0"
+          className="font-bold text-3xl cursor-pointer mob:p-2 laptop:p-0 bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary hover:opacity-80 transition-opacity"
         >
           {name}.
         </h1>
         {!isBlog ? (
-          <div className="flex">
+          <div className="flex gap-2">
             <Button onClick={handleWorkScroll}>Work</Button>
             <Button onClick={handleAboutScroll}>About</Button>
             {showBlog && (
@@ -139,7 +135,6 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
             {showResume && (
               <Button
                 onClick={() => router.push("/resume")}
-                classes="first:ml-1"
               >
                 Resume
               </Button>
@@ -151,9 +146,10 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
             {mounted && theme && data.darkMode && (
               <Button
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                classes="bg-gray-100 dark:bg-gray-800 p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
               >
                 <img
-                  className="h-6"
+                  className="h-5 w-5"
                   src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
                 ></img>
               </Button>
