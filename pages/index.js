@@ -96,22 +96,23 @@ export default function Home() {
         />
         <div className="hero-section laptop:mt-20 mt-10">
           <div className="hero-content px-2 laptop:px-0">
-            {/* Badges */}
-            <div className="flex items-center gap-3 mb-6" ref={textOne}>
-              <span className="badge-primary">Backend Developer</span>
-              <span className="badge-secondary">3+ Years</span>
-            </div>
+            {/* Friendly Greeting */}
+            <h2 ref={textOne} className="text-3xl laptop:text-4xl font-light text-text-secondary mb-4">
+              Hello 👋
+            </h2>
 
-            {/* Hero Title */}
-            <h1 ref={textTwo} className="hero-title">
-              {data.headerTaglineTwo}
-              <br />
-              <span className="gradient-text-backend">{data.headerTaglineThree}</span>
+            {/* Introduction */}
+            <h1 ref={textTwo} className="hero-title mb-6">
+              I'm <span className="gradient-text-backend">{data.resume_name}</span> - Backend Developer
             </h1>
 
-            {/* Subtitle */}
-            <p ref={textThree} className="hero-subtitle">
-              Specialized in Node.js, PHP, and database-driven applications
+            {/* Location & Specialty */}
+            <p ref={textThree} className="hero-subtitle flex flex-col gap-2">
+              <span className="flex items-center gap-2">
+                <span className="text-2xl">📍</span>
+                <span>Based in Istanbul, Turkiye</span>
+              </span>
+              <span>Specialized in building scalable APIs and robust backend systems</span>
             </p>
 
             {/* Tech Quick Badges */}
@@ -220,7 +221,9 @@ export default function Home() {
         {process.env.NODE_ENV === "development" && (
           <div className="fixed bottom-5 right-5">
             <Link href="/edit">
-              <Button type="primary">Edit Data</Button>
+              <a>
+                <Button type="primary">Edit Data</Button>
+              </a>
             </Link>
           </div>
         )}
