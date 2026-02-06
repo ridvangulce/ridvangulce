@@ -1,5 +1,6 @@
 import React from "react";
 
+/* eslint-disable @next/next/no-img-element */
 const WorkCard = ({ img, name, description, onClick, className }) => {
   return (
     <div
