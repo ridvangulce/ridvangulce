@@ -31,7 +31,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               </h1>
 
               <div className="flex items-center">
-                {data.darkMode && (
+                {mounted && theme && data.darkMode && (
                   <Button
                     onClick={() =>
                       setTheme(theme === "dark" ? "light" : "dark")
@@ -47,14 +47,15 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   </Button>
                 )}
 
+
                 <Popover.Button>
                   <img
                     className="h-5"
                     src={`/images/${!open
-                        ? theme === "dark"
+                        ? mounted && theme === "dark"
                           ? "menu-white.svg"
                           : "menu.svg"
-                        : theme === "light"
+                        : mounted && theme === "light"
                           ? "cancel.svg"
                           : "cancel-white.svg"
                       }`}
