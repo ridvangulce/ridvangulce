@@ -8,6 +8,8 @@ import Header from "../../components/Header";
 import data from "../../data/portfolio.json";
 import { ISOToDate, useIsomorphicLayoutEffect } from "../../utils";
 import { getAllPosts } from "../../utils/api";
+
+/* eslint-disable @next/next/no-img-element */
 const Blog = ({ posts }) => {
   const showBlog = useRef(data.showBlog);
   const text = useRef();

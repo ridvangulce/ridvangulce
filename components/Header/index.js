@@ -6,6 +6,7 @@ import Button from "../Button";
 // Local Data
 import data from "../../data/portfolio.json";
 
+/* eslint-disable @next/next/no-img-element */
 const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
   const router = useRouter();
   const { theme, setTheme } = useTheme();
@@ -59,6 +60,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                           ? "cancel.svg"
                           : "cancel-white.svg"
                       }`}
+                    alt="Menu"
                   ></img>
                 </Popover.Button>
               </div>

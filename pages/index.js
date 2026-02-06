@@ -103,7 +103,7 @@ export default function Home() {
 
             {/* Introduction */}
             <h1 ref={textTwo} className="hero-title mb-6">
-              I'm <span className="gradient-text-backend">{data.resume_name}</span> - Backend Developer
+              I&apos;m <span className="gradient-text-backend">{data.resume_name}</span> - Backend Developer
             </h1>
 
             {/* Location & Specialty */}
