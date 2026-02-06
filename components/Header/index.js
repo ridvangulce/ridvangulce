@@ -36,11 +36,13 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                     onClick={() =>
                       setTheme(theme === "dark" ? "light" : "dark")
                     }
+                    classes="relative p-2.5 rounded-full transition-all duration-300 hover:scale-110 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 mr-2"
                   >
                     <img
-                      className="h-6"
+                      className="h-5 w-5 transition-transform duration-300"
                       src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"
                         }`}
+                      alt={theme === "dark" ? "Dark mode" : "Light mode"}
                     ></img>
                   </Button>
                 )}
@@ -146,11 +148,12 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
             {mounted && theme && data.darkMode && (
               <Button
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                classes="bg-gray-100 dark:bg-gray-800 p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                classes="relative p-2.5 rounded-full transition-all duration-300 hover:scale-110 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20"
               >
                 <img
-                  className="h-5 w-5"
+                  className="h-5 w-5 transition-transform duration-300 hover:rotate-12"
                   src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
+                  alt={theme === "dark" ? "Dark mode" : "Light mode"}
                 ></img>
               </Button>
             )}
@@ -177,10 +180,12 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
             {mounted && theme && data.darkMode && (
               <Button
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                classes="relative p-2.5 rounded-full transition-all duration-300 hover:scale-110 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20"
               >
                 <img
-                  className="h-6"
+                  className="h-5 w-5 transition-transform duration-300 hover:rotate-12"
                   src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
+                  alt={theme === "dark" ? "Dark mode" : "Light mode"}
                 ></img>
               </Button>
             )}

@@ -95,7 +95,7 @@ const Resume = () => {
 
                   {resume.frameworks && (
                     <div className="mt-2 mob:mt-5">
-                      <h2 className="text-lg text-lg font-bold text-text-primary">Server Side</h2>
+                      <h2 className="text-lg text-lg font-bold text-text-primary">Backend Frameworks</h2>
                       <ul className="list-disc">
                         {resume.frameworks.map((framework, index) => (
                           <li key={index} className="ml-5 py-2 text-text-secondary">

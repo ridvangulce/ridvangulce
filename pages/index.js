@@ -3,6 +3,11 @@ import Header from "../components/Header";
 import ServiceCard from "../components/ServiceCard";
 import Socials from "../components/Socials";
 import WorkCard from "../components/WorkCard";
+import WorkCardSkeleton from "../components/WorkCardSkeleton";
+import TechStack from "../components/TechStack";
+import AboutSection from "../components/AboutSection";
+import StatsSection from "../components/StatsSection";
+import ApiShowcase from "../components/ApiShowcase";
 import { useIsomorphicLayoutEffect } from "../utils";
 import { stagger } from "../animations";
 import Footer from "../components/Footer";
@@ -10,6 +15,7 @@ import Head from "next/head";
 import Button from "../components/Button";
 import Link from "next/link";
 import Cursor from "../components/Cursor";
+import { SiNodedotjs, SiPhp, SiExpress, SiPostgresql, SiMysql, SiLaravel } from "react-icons/si";
 
 // Local Data
 import data from "../data/portfolio.json";
@@ -20,6 +26,7 @@ export default function Home() {
   const [projectsToShow, setProjectsToShow] = useState(
     data.projects.slice(0, 4)
   );
+  const [isLoading, setIsLoading] = useState(false);
 
   // Ref
   const workRef = useRef();
@@ -46,15 +53,21 @@ export default function Home() {
   };
 
   const showMoreProjects = () => {
+    setIsLoading(true);
     const remainingProjects = data.projects.slice(visibleProjects);
 
-    remainingProjects.forEach((project, index) => {
-      setTimeout(() => {
-        setProjectsToShow((prev) => [...prev, project]);
-      }, index * 300); // 300ms gecikme ile projeleri ekle
-    });
+    // Show skeletons for 1 second, then load projects
+    setTimeout(() => {
+      setIsLoading(false);
+      setVisibleProjects(data.projects.length);
 
-    setVisibleProjects(data.projects.length);
+      // Stagger adding actual projects
+      remainingProjects.forEach((project, index) => {
+        setTimeout(() => {
+          setProjectsToShow((prev) => [...prev, project]);
+        }, index * 200); // 200ms stagger
+      });
+    }, 1000);
   };
 
   useIsomorphicLayoutEffect(() => {
@@ -81,36 +94,74 @@ export default function Home() {
           handleWorkScroll={handleWorkScroll}
           handleAboutScroll={handleAboutScroll}
         />
-        <div className="laptop:mt-20 mt-10">
-          <div className="mt-5">
-            <h1
-              ref={textOne}
-              className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 text-bold w-4/5 mob:w-full laptop:w-4/5"
-            >
-              {data.headerTaglineOne}
-            </h1>
-            <h1
-              ref={textTwo}
-              className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
-            >
-              {data.headerTaglineTwo}
-            </h1>
-            <h1
-              ref={textThree}
-              className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
-            >
-              {data.headerTaglineThree}
-            </h1>
-            <h1
-              ref={textFour}
-              className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
-            >
-              {data.headerTaglineFour}
-            </h1>
-          </div>
+        <div className="hero-section laptop:mt-20 mt-10">
+          <div className="hero-content px-2 laptop:px-0">
+            {/* Badges */}
+            <div className="flex items-center gap-3 mb-6" ref={textOne}>
+              <span className="badge-primary">Backend Developer</span>
+              <span className="badge-secondary">3+ Years</span>
+            </div>
 
-          <Socials className="mt-2 laptop:mt-5" />
+            {/* Hero Title */}
+            <h1 ref={textTwo} className="hero-title">
+              {data.headerTaglineTwo}
+              <br />
+              <span className="gradient-text-backend">{data.headerTaglineThree}</span>
+            </h1>
+
+            {/* Subtitle */}
+            <p ref={textThree} className="hero-subtitle">
+              Specialized in Node.js, PHP, and database-driven applications
+            </p>
+
+            {/* Tech Quick Badges */}
+            <div className="tech-quick-badges" ref={textFour}>
+              <div className="tech-quick-badge">
+                <SiNodedotjs className="text-2xl" />
+                <span className="font-semibold">Node.js</span>
+              </div>
+              <div className="tech-quick-badge">
+                <SiPhp className="text-2xl" />
+                <span className="font-semibold">PHP</span>
+              </div>
+              <div className="tech-quick-badge">
+                <SiExpress className="text-2xl" />
+                <span className="font-semibold">Express</span>
+              </div>
+              <div className="tech-quick-badge">
+                <SiLaravel className="text-2xl" />
+                <span className="font-semibold">Laravel</span>
+              </div>
+              <div className="tech-quick-badge">
+                <SiPostgresql className="text-2xl" />
+                <span className="font-semibold">PostgreSQL</span>
+              </div>
+              <div className="tech-quick-badge">
+                <SiMysql className="text-2xl" />
+                <span className="font-semibold">MySQL</span>
+              </div>
+            </div>
+
+            <Socials className="mt-6" />
+          </div>
         </div>
+
+        {/* Stats Section */}
+        <div className="mt-20 laptop:mt-30">
+          <StatsSection stats={data.stats} />
+        </div>
+
+        {/* About Section - Moved up */}
+        <div ref={aboutRef}>
+          <AboutSection aboutpara={data.aboutpara} />
+        </div>
+
+        {/* API Showcase Section */}
+        <div className="mt-10 laptop:mt-30">
+          <ApiShowcase />
+        </div>
+
+        {/* Projects Section */}
         <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={workRef}>
           <div className="flex justify-between">
             <h1 className="text-2xl text-bold">Projects</h1>
@@ -129,6 +180,11 @@ export default function Home() {
                   }`}
               />
             ))}
+
+            {/* Skeleton loaders */}
+            {isLoading && Array.from({ length: data.projects.length - visibleProjects }).map((_, i) => (
+              <WorkCardSkeleton key={`skeleton-${i}`} />
+            ))}
           </div>
 
           {/* Eğer gösterilen proje sayısı toplam projelerden azsa "More Projects" butonunu göster */}
@@ -146,6 +202,7 @@ export default function Home() {
           )}
         </div>
 
+        {/* Expertise Section */}
         <div className="mt-10 laptop:mt-30 p-2 laptop:p-0">
           <h1 className="tablet:m-10 text-2xl text-bold">Expertise.</h1>
           <div className="mt-5 tablet:m-10 grid grid-cols-1 laptop:grid-cols-2 gap-6">
@@ -158,6 +215,7 @@ export default function Home() {
             ))}
           </div>
         </div>
+
         {/* This button should not go into production */}
         {process.env.NODE_ENV === "development" && (
           <div className="fixed bottom-5 right-5">
@@ -166,12 +224,7 @@ export default function Home() {
             </Link>
           </div>
         )}
-        <div className="mt-10 laptop:mt-40 p-2 laptop:p-0" ref={aboutRef}>
-          <h1 className="tablet:m-10 text-2xl text-bold">About.</h1>
-          <p className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-full laptop:w-3/5">
-            {data.aboutpara}
-          </p>
-        </div>
+
         <Footer />
       </div>
     </div>
