@@ -1,14 +1,68 @@
 {
     "name": "RG",
     "resume_name": "Rıdvan Gülçe",
-    "headerTaglineOne": "Hello 👋",
-    "headerTaglineTwo": "I'm Rıdvan Gülçe - curious",
-    "headerTaglineThree": "developer",
-    "headerTaglineFour": " based in Istanbul, Turkiye.",
+    "headerTaglineOne": "Backend Developer",
+    "headerTaglineTwo": "Building Scalable APIs",
+    "headerTaglineThree": "& Robust Backends",
+    "headerTaglineFour": "Node.js | PHP | PostgreSQL | Express",
     "showCursor": false,
     "showBlog": false,
     "darkMode": true,
     "showResume": true,
+    "stats": [
+        {
+            "number": "30+",
+            "label": "APIs Built",
+            "icon": "api",
+            "description": "RESTful endpoints in production"
+        },
+        {
+            "number": "12+",
+            "label": "Projects Delivered",
+            "icon": "project",
+            "description": "Corporate & E-commerce sites"
+        },
+        {
+            "number": "3+",
+            "label": "Years Experience",
+            "icon": "experience",
+            "description": "Backend development"
+        }
+    ],
+    "techStack": [
+        {
+            "name": "NodeJS",
+            "category": "Backend"
+        },
+        {
+            "name": "PHP",
+            "category": "Backend"
+        },
+        {
+            "name": "Express",
+            "category": "Backend"
+        },
+        {
+            "name": "Laravel",
+            "category": "Backend"
+        },
+        {
+            "name": "PostgreSQL",
+            "category": "Database"
+        },
+        {
+            "name": "MySQL",
+            "category": "Database"
+        },
+        {
+            "name": "MongoDB",
+            "category": "Database"
+        },
+        {
+            "name": "React.JS & Next.JS",
+            "category": "Frontend"
+        }
+    ],
     "socials": [
         {
             "id": "1",
@@ -51,7 +105,7 @@
         {
             "id": "3",
             "title": "ARC Water",
-            "description": "Product Promotion",
+            "description": "Corporate",
             "imageSrc": "https://firebasestorage.googleapis.com/v0/b/resume-react-a28a3.appspot.com/o/images%2FScreenshot%202024-09-09%20at%2021.03.03.png?alt=media&token=915dbac8-df6b-4faf-8abe-976ad6b2111c",
             "url": "https://www.arcwater.com.tr/"
         },
@@ -65,49 +119,49 @@
         {
             "id": "5",
             "title": "Dumanoğlu Energy",
-            "description": "Product Promotion",
+            "description": "Corporate",
             "imageSrc": "https://firebasestorage.googleapis.com/v0/b/resume-react-a28a3.appspot.com/o/images%2FScreenshot%202024-09-09%20at%2021.19.50.png?alt=media&token=e5cff987-1b99-467a-a7da-8f34046be30c",
             "url": "https://www.dumanogluenerji.com"
         },
         {
             "id": "6",
             "title": "Hidea",
-            "description": "Product Promotion",
+            "description": "Corporate",
             "imageSrc": "https://firebasestorage.googleapis.com/v0/b/resume-react-a28a3.appspot.com/o/images%2FScreenshot%202024-09-10%20at%2017.32.54.png?alt=media&token=7b13490c-95c5-4093-b11e-b6f3d3b134b9",
             "url": "https://www.hidea.com.tr/tr"
         },
         {
             "id": "11028ee0-9d7a-4830-8540-43205f1d72e2",
             "title": "OXO Tracker",
-            "description": "Product Promotion",
+            "description": "Corporate",
             "imageSrc": "https://firebasestorage.googleapis.com/v0/b/resume-react-a28a3.appspot.com/o/images%2FEkran%20Resmi%202024-09-11%2012.06.46.png?alt=media&token=10132fd0-dfe5-4c67-a289-b60cd263bc4f",
             "url": "https://www.oxotracker.com/"
         },
         {
             "id": "80a4270d-5879-446e-9fa6-f2eb0fa6edce",
             "title": "Oxy Word Psa",
-            "description": "Product Promotion",
+            "description": "Corporate",
             "imageSrc": "https://firebasestorage.googleapis.com/v0/b/resume-react-a28a3.appspot.com/o/images%2FEkran%20Resmi%202024-09-11%2012.10.22.png?alt=media&token=96b4f4d3-1b6b-4701-94d0-9a151ec566b4",
             "url": "http://demo.biltektasarim.com/?site=medisam"
         },
         {
             "id": "8dfe1c5c-0a9c-4a7f-8045-04bae8085985",
             "title": "Carina Rugs",
-            "description": "Product Promotion",
+            "description": "Corporate",
             "imageSrc": "https://firebasestorage.googleapis.com/v0/b/resume-react-a28a3.appspot.com/o/images%2FEkran%20Resmi%202024-09-11%2012.12.43.png?alt=media&token=4ed9da1b-cbfb-441d-92b5-c762f148a658",
             "url": "https://www.carinarugs.com/"
         },
         {
             "id": "4983910b-9aa0-45ad-9d99-830bdf7c1e6b",
             "title": "Carina",
-            "description": "Product Promotion",
+            "description": "Corporate",
             "imageSrc": "https://firebasestorage.googleapis.com/v0/b/resume-react-a28a3.appspot.com/o/images%2FEkran%20Resmi%202024-09-11%2012.15.17.png?alt=media&token=68b170f0-c30d-4993-a1fb-fff961e98549",
             "url": "http://demo.biltektasarim.com/?site=carina"
         },
         {
             "id": "a745f910-0ba5-4c94-82b0-91e88a90e890",
             "title": "Duca Pump",
-            "description": "Product Promotion",
+            "description": "Corporate",
             "imageSrc": "https://firebasestorage.googleapis.com/v0/b/resume-react-a28a3.appspot.com/o/images%2FEkran%20Resmi%202024-09-11%2012.19.05.png?alt=media&token=9d3429b3-774a-49b3-8c78-10bfb0e0890b",
             "url": "https://www.ducapump.com/tr"
         }
@@ -174,6 +228,7 @@
         "frameworks": [
             "NodeJS",
             "Express",
+            "Laravel",
             "PostgreSQL",
             "MySQL",
             "MongoDB"
