@@ -4,11 +4,11 @@ import React from "react";
 const WorkCard = ({ img, name, description, onClick, className }) => {
   return (
     <div
-      className={`glass overflow-hidden rounded-xl p-2 laptop:p-4 first:ml-0 link flex flex-col transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:border-primary/30 group ${className}`}
+      className={`glass overflow-hidden rounded-xl p-3 mob:p-4 laptop:p-4 first:ml-0 link flex flex-col transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:border-primary/30 group ${className}`}
       onClick={onClick}
     >
       <div
-        className="relative rounded-lg overflow-hidden transition-all ease-out duration-300 h-48 mob:h-auto flex-1 max-h-[480px]"
+        className="relative rounded-lg overflow-hidden transition-all ease-out duration-300 h-44 mob:h-52 tablet:h-48 laptop:h-auto flex-1 max-h-[480px]"
       >
         <img
           alt={name}
@@ -19,10 +19,10 @@ const WorkCard = ({ img, name, description, onClick, className }) => {
           <span className="text-white font-medium">View Project &rarr;</span>
         </div>
       </div>
-      <h1 className="mt-5 text-2xl font-bold text-text-primary group-hover:text-primary transition-colors">
+      <h1 className="mt-3 mob:mt-4 laptop:mt-5 text-lg mob:text-xl laptop:text-2xl font-bold text-text-primary group-hover:text-primary transition-colors">
         {name ? name : "Project Name"}
       </h1>
-      <h2 className="text-lg text-text-secondary mt-2">
+      <h2 className="text-sm mob:text-base laptop:text-lg text-text-secondary mt-1 mob:mt-2">
         {description ? description : "Description"}
       </h2>
     </div>

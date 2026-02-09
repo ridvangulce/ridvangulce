@@ -79,7 +79,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className={`relative ${data.showCursor && "cursor-none"}`}>
+    <div className={`relative overflow-x-hidden ${data.showCursor && "cursor-none"}`}>
       {data.showCursor && <Cursor />}
       <Head>
         <title>{data.resume_name}</title>
@@ -169,7 +169,7 @@ export default function Home() {
             <p>Found {data.projects.length} Projects</p>
           </div>
 
-          <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 gap-4">
+          <div className="mt-5 laptop:mt-10 grid grid-cols-2 tablet:grid-cols-2 laptop:grid-cols-3 gap-3 mob:gap-4">
             {projectsToShow.map((project, index) => (
               <WorkCard
                 key={project.id}

@@ -83,8 +83,8 @@ const StatCard = ({ number, label, icon, description }) => {
 
 const StatsSection = ({ stats }) => {
   return (
-    <section className="stats-section p-2 laptop:p-0">
-      <h2 className="text-2xl laptop:text-3xl font-bold text-center mb-2">
+    <section className="stats-section px-2 laptop:px-0">
+      <h2 className="text-xl mob:text-2xl laptop:text-3xl font-bold text-center mb-2">
         Impact & Experience
       </h2>
       <p className="text-center text-text-secondary mb-8">
