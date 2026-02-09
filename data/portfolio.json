@@ -93,6 +93,7 @@
             "title": "Rampage",
             "description": "E-commerce",
             "imageSrc": "/images/mockups/rampage.png",
+            "imageSrc": "/images/mockups/rampage.png",
             "url": "https://www.rampage.com.tr/"
         },
         {
@@ -114,7 +115,7 @@
             "title": "NFA",
             "description": "E-commerce",
             "imageSrc": "/images/mockups/nfa.png",
-            "url": "https://www.nefesvefarkindalikakademi.com/"
+            "url": "http://demo.biltektasarim.com/?site=nfa"
         },
         {
             "id": "5",
@@ -192,6 +193,13 @@
             "description": "Corporate",
             "imageSrc": "/images/mockups/cbr.png",
             "url": "https://www.cbrfragrances.com/"
+        },
+        {
+            "id": "16",
+            "title": "Erkasis",
+            "description": "Corporate",
+            "imageSrc": "/images/mockups/erkasis.png",
+            "url": "https://www.erkasis.com/"
         }
     ],
     "services": [
