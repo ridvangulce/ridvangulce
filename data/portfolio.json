@@ -131,47 +131,76 @@
             "url": "https://www.hidea.com.tr/tr"
         },
         {
-            "id": "11028ee0-9d7a-4830-8540-43205f1d72e2",
+            "id": "7",
             "title": "OXO Tracker",
             "description": "Corporate",
             "imageSrc": "/images/mockups/oxo_tracker.png",
             "url": "https://www.oxotracker.com/"
         },
         {
-            "id": "80a4270d-5879-446e-9fa6-f2eb0fa6edce",
+            "id": "8",
             "title": "Oxy Word Psa",
             "description": "Corporate",
             "imageSrc": "/images/mockups/oxy.png",
             "url": "http://demo.biltektasarim.com/?site=medisam"
         },
         {
-            "id": "8dfe1c5c-0a9c-4a7f-8045-04bae8085985",
+            "id": "9",
             "title": "Carina Rugs",
             "description": "Corporate",
             "imageSrc": "/images/mockups/carina_rugs.png",
             "url": "https://www.carinarugs.com/"
         },
         {
-            "id": "4983910b-9aa0-45ad-9d99-830bdf7c1e6b",
+            "id": "10",
             "title": "Carina",
             "description": "Corporate",
             "imageSrc": "/images/mockups/carina.png",
             "url": "http://demo.biltektasarim.com/?site=carina"
         },
         {
-            "id": "a745f910-0ba5-4c94-82b0-91e88a90e890",
+            "id": "11",
             "title": "Duca Pump",
             "description": "Corporate",
             "imageSrc": "/images/mockups/duca_pump.png",
             "url": "https://www.ducapump.com/tr"
         },
         {
-            "id": "a745f910-0ba5-4c94-82b0-91e88a90e890",
+            "id": "12",
             "title": "Enhoş Toys",
             "description": "Corporate",
             "imageSrc": "/images/mockups/enhos_toys.png",
             "url": "https://www.enhostoys.com"
+        },
+        {
+            "id": "13",
+            "title": "Nova Koltuk",
+            "description": "Corporate",
+            "imageSrc": "/images/mockups/novakoltuk.png",
+            "url": "https://www.novakoltuk.com"
+        },
+        {
+            "id": "14",
+            "title": "Gewhery",
+            "description": "E-commerce",
+            "imageSrc": "/images/mockups/gewhery.png",
+            "url": "http://demo.biltektasarim.com/?site=gewhery"
+        },
+        {
+            "id": "15",
+            "title": "CBR Fragrance",
+            "description": "Corporate",
+            "imageSrc": "/images/mockups/cbr.png",
+            "url": "https://www.cbrfragrances.com/"
+        },
+        {
+            "id": "16",
+            "title": "Erkasis",
+            "description": "Corporate",
+            "imageSrc": "/images/mockups/erkasis.png",
+            "url": "https://www.erkasis.com/"
         }
+
     ],
     "services": [
         {
