@@ -92,78 +92,85 @@
             "id": "1",
             "title": "Rampage",
             "description": "E-commerce",
-            "imageSrc": "https://firebasestorage.googleapis.com/v0/b/resume-react-a28a3.appspot.com/o/images%2FScreenshot%202024-09-09%20at%2020.55.37.png?alt=media&token=33b794bd-9b99-4e9c-86eb-4b9f0fb3eff6",
+            "imageSrc": "/images/mockups/rampage.png",
             "url": "https://www.rampage.com.tr/"
         },
         {
             "id": "2",
             "title": "Viport",
             "description": "E-commerce",
-            "imageSrc": "https://firebasestorage.googleapis.com/v0/b/resume-react-a28a3.appspot.com/o/images%2Fviport.png?alt=media&token=7d4d8fb5-1de7-440b-8d78-55ae09248a91",
+            "imageSrc": "/images/mockups/viport.png",
             "url": "http://demo.biltektasarim.com?site=transfer1"
         },
         {
             "id": "3",
             "title": "ARC Water",
             "description": "Corporate",
-            "imageSrc": "https://firebasestorage.googleapis.com/v0/b/resume-react-a28a3.appspot.com/o/images%2FScreenshot%202024-09-09%20at%2021.03.03.png?alt=media&token=915dbac8-df6b-4faf-8abe-976ad6b2111c",
+            "imageSrc": "/images/mockups/arc_water.png",
             "url": "https://www.arcwater.com.tr/"
         },
         {
             "id": "4",
             "title": "NFA",
             "description": "E-commerce",
-            "imageSrc": "https://firebasestorage.googleapis.com/v0/b/resume-react-a28a3.appspot.com/o/images%2FScreenshot%202024-09-09%20at%2021.09.30.png?alt=media&token=01b9fc96-b5c5-4fca-8040-f52911bb1f1e",
+            "imageSrc": "/images/mockups/nfa.png",
             "url": "http://demo.biltektasarim.com/?site=nfa"
         },
         {
             "id": "5",
             "title": "Dumanoğlu Energy",
             "description": "Corporate",
-            "imageSrc": "https://firebasestorage.googleapis.com/v0/b/resume-react-a28a3.appspot.com/o/images%2FScreenshot%202024-09-09%20at%2021.19.50.png?alt=media&token=e5cff987-1b99-467a-a7da-8f34046be30c",
+            "imageSrc": "/images/mockups/dumanoglu.png",
             "url": "https://www.dumanogluenerji.com"
         },
         {
             "id": "6",
             "title": "Hidea",
             "description": "Corporate",
-            "imageSrc": "https://firebasestorage.googleapis.com/v0/b/resume-react-a28a3.appspot.com/o/images%2FScreenshot%202024-09-10%20at%2017.32.54.png?alt=media&token=7b13490c-95c5-4093-b11e-b6f3d3b134b9",
+            "imageSrc": "/images/mockups/hidea.png",
             "url": "https://www.hidea.com.tr/tr"
         },
         {
             "id": "11028ee0-9d7a-4830-8540-43205f1d72e2",
             "title": "OXO Tracker",
             "description": "Corporate",
-            "imageSrc": "https://firebasestorage.googleapis.com/v0/b/resume-react-a28a3.appspot.com/o/images%2FEkran%20Resmi%202024-09-11%2012.06.46.png?alt=media&token=10132fd0-dfe5-4c67-a289-b60cd263bc4f",
+            "imageSrc": "/images/mockups/oxo_tracker.png",
             "url": "https://www.oxotracker.com/"
         },
         {
             "id": "80a4270d-5879-446e-9fa6-f2eb0fa6edce",
             "title": "Oxy Word Psa",
             "description": "Corporate",
-            "imageSrc": "https://firebasestorage.googleapis.com/v0/b/resume-react-a28a3.appspot.com/o/images%2FEkran%20Resmi%202024-09-11%2012.10.22.png?alt=media&token=96b4f4d3-1b6b-4701-94d0-9a151ec566b4",
+            "imageSrc": "/images/mockups/oxy.png",
             "url": "http://demo.biltektasarim.com/?site=medisam"
         },
         {
             "id": "8dfe1c5c-0a9c-4a7f-8045-04bae8085985",
             "title": "Carina Rugs",
             "description": "Corporate",
-            "imageSrc": "https://firebasestorage.googleapis.com/v0/b/resume-react-a28a3.appspot.com/o/images%2FEkran%20Resmi%202024-09-11%2012.12.43.png?alt=media&token=4ed9da1b-cbfb-441d-92b5-c762f148a658",
+            "imageSrc": "/images/mockups/carina_rugs.png",
             "url": "https://www.carinarugs.com/"
         },
         {
             "id": "4983910b-9aa0-45ad-9d99-830bdf7c1e6b",
             "title": "Carina",
             "description": "Corporate",
-            "imageSrc": "https://firebasestorage.googleapis.com/v0/b/resume-react-a28a3.appspot.com/o/images%2FEkran%20Resmi%202024-09-11%2012.15.17.png?alt=media&token=68b170f0-c30d-4993-a1fb-fff961e98549",
+            "imageSrc": "/images/mockups/carina.png",
             "url": "http://demo.biltektasarim.com/?site=carina"
         },
         {
             "id": "a745f910-0ba5-4c94-82b0-91e88a90e890",
             "title": "Duca Pump",
             "description": "Corporate",
-            "imageSrc": "https://firebasestorage.googleapis.com/v0/b/resume-react-a28a3.appspot.com/o/images%2FEkran%20Resmi%202024-09-11%2012.19.05.png?alt=media&token=9d3429b3-774a-49b3-8c78-10bfb0e0890b",
+            "imageSrc": "/images/mockups/duca_pump.png",
             "url": "https://www.ducapump.com/tr"
+        },
+        {
+            "id": "a745f910-0ba5-4c94-82b0-91e88a90e890",
+            "title": "Enhoş Toys",
+            "description": "Corporate",
+            "imageSrc": "/images/mockups/enhos_toys.png",
+            "url": "https://www.enhostoys.com"
         }
     ],
     "services": [
