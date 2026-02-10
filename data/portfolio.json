@@ -200,7 +200,6 @@
             "imageSrc": "/images/mockups/erkasis.png",
             "url": "https://www.erkasis.com/"
         }
-
     ],
     "services": [
         {
@@ -224,7 +223,7 @@
             "description": "Optimize database performance, ensuring your applications run smoothly and efficiently."
         }
     ],
-    "aboutpara": "Back-End Developer with 3+ years of professional experience building API-driven backend systems and database-centered applications. Strong focus on SQL performance, clean backend architecture, and production-ready API design using Node.js and PHP . Hands-on experience with raw SQL, query optimization, and backend performance tuning in production environments.",
+    "aboutpara": "Passionate Backend Developer with 3+ years of experience building robust, API-driven systems. Specializing in Node.js, Express, and Laravel, I engineer scalable backend architectures with a strong focus on SQL performance and database optimization. Dedicated to delivering clean, production-ready code that ensures high availability and speed.",
     "resume": {
         "tagline": "👋  I'm a software developer",
         "description": "As a motivated software developer, I bring a versatile skill set that spans both front-\nend and back-end web development. Well-versed with NodeJS,PHP, MongoDB, Firebase, MySQL, Javascript, ReactJS.",
