@@ -1,229 +1,167 @@
-import { useRef, useState } from "react";
-import Header from "../components/Header";
-import ServiceCard from "../components/ServiceCard";
-import Socials from "../components/Socials";
-import WorkCard from "../components/WorkCard";
-import WorkCardSkeleton from "../components/WorkCardSkeleton";
-import TechStack from "../components/TechStack";
-import AboutSection from "../components/AboutSection";
-import StatsSection from "../components/StatsSection";
-import ApiShowcase from "../components/ApiShowcase";
-import TabExpertise from "../components/TabExpertise";
-import { useIsomorphicLayoutEffect } from "../utils";
-import { stagger } from "../animations";
-import Footer from "../components/Footer";
-import Head from "next/head";
-import Button from "../components/Button";
-import Link from "next/link";
-import Cursor from "../components/Cursor";
-import { SiNodedotjs, SiPhp, SiExpress, SiPostgresql, SiMysql, SiLaravel } from "react-icons/si";
+import dynamic from 'next/dynamic';
+import Layout from '../components/Layout';
+import Section from '../components/Section';
+import CaseStudyCard from '../components/CaseStudyCard';
+import { caseStudies } from '../data/caseStudies';
+import { experience } from '../data/experience';
+import { projects } from '../data/projects';
+import { FaGithub, FaTwitter, FaLinkedin } from 'react-icons/fa';
+import Link from 'next/link';
 
-// Local Data
-import data from "../data/portfolio.json";
+// Dynamically import heavy 3D components
+const HeroObject = dynamic(() => import('../components/canvas/HeroObject'), { ssr: false });
+const ShaderBackground = dynamic(() => import('../components/canvas/ShaderBackground'), { ssr: false });
 
 export default function Home() {
-  //State
-  const [visibleProjects, setVisibleProjects] = useState(6);
-  const [projectsToShow, setProjectsToShow] = useState(
-    data.projects.slice(0, 6)
-  );
-  const [isLoading, setIsLoading] = useState(false);
-
-  // Ref
-  const workRef = useRef();
-  const aboutRef = useRef();
-  const textOne = useRef();
-  const textTwo = useRef();
-  const textThree = useRef();
-  const textFour = useRef();
-  // Handling Scroll
-  const handleWorkScroll = () => {
-    window.scrollTo({
-      top: workRef.current.offsetTop,
-      left: 0,
-      behavior: "smooth",
-    });
-  };
-
-  const handleAboutScroll = () => {
-    window.scrollTo({
-      top: aboutRef.current.offsetTop,
-      left: 0,
-      behavior: "smooth",
-    });
-  };
-
-  const showMoreProjects = () => {
-    setIsLoading(true);
-    const remainingProjects = data.projects.slice(visibleProjects);
-
-    // Show skeletons for 1 second, then load projects
-    setTimeout(() => {
-      setIsLoading(false);
-      setVisibleProjects(data.projects.length);
-
-      // Stagger adding actual projects
-      remainingProjects.forEach((project, index) => {
-        setTimeout(() => {
-          setProjectsToShow((prev) => [...prev, project]);
-        }, index * 200); // 200ms stagger
-      });
-    }, 1000);
-  };
-
-  useIsomorphicLayoutEffect(() => {
-    stagger(
-      [textOne.current, textTwo.current, textThree.current, textFour.current],
-      { y: 40, x: -10, transform: "scale(0.95) skew(10deg)" },
-      { y: 0, x: 0, transform: "scale(1)" }
-    );
-  }, []);
-
   return (
-    <div className={`relative ${data.showCursor && "cursor-none"}`}>
-      {data.showCursor && <Cursor />}
-      <Head>
-        <title>{data.resume_name}</title>
-        <link rel="icon" href="/images/download-modified.png" />
-      </Head>
+    <Layout>
+      <ShaderBackground />
 
-      <div className="gradient-circle"></div>
-      <div className="gradient-circle-bottom"></div>
+      {/* Hero Section */}
+      <div className="relative min-h-[90vh] flex items-center overflow-hidden">
+        {/* 3D Background Layer */}
+        <div className="absolute inset-0 z-0">
+          <HeroObject />
+        </div>
 
-      <div className="container mx-auto mb-10">
-        <Header
-          handleWorkScroll={handleWorkScroll}
-          handleAboutScroll={handleAboutScroll}
-        />
-        <div className="hero-section laptop:mt-20 mt-10">
-          <div className="hero-content px-2 laptop:px-0">
-            {/* Friendly Greeting */}
-            <h2 ref={textOne} className="text-3xl laptop:text-4xl font-light text-text-secondary mb-4">
-              Hello 👋
-            </h2>
-
-            {/* Introduction */}
-            <h1 ref={textTwo} className="hero-title mb-6">
-              I&apos;m <span className="gradient-text-backend">{data.resume_name}</span> - Backend Developer
+        <div className="container-custom relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center pointer-events-none">
+          <Section className="pointer-events-auto">
+            <p className="text-primary font-mono mb-4 tracking-wider">Hi, I&apos;m Rıdvan Gülçe</p>
+            <h1 className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500 mb-6 leading-tight">
+              Backend Developer <br /> & Scalable APIs
             </h1>
-
-            {/* Location & Specialty */}
-            <p ref={textThree} className="hero-subtitle flex flex-col gap-2">
-              <span className="flex items-center gap-2">
-                <span className="text-2xl">📍</span>
-                <span>Based in Istanbul, Turkiye</span>
-              </span>
-              <span>Specialized in building scalable APIs and robust backend systems</span>
+            <p className="text-text-secondary text-lg md:text-xl max-w-lg mb-8 leading-relaxed">
+              Passionate Backend Developer with 3+ years of experience building robust, API-driven systems.
+              Specializing in Node.js, Express, and Laravel.
             </p>
-
-            {/* Tech Quick Badges */}
-            <div className="tech-quick-badges" ref={textFour}>
-              <div className="tech-quick-badge">
-                <SiNodedotjs className="text-2xl" />
-                <span className="font-semibold">Node.js</span>
-              </div>
-              <div className="tech-quick-badge">
-                <SiPhp className="text-2xl" />
-                <span className="font-semibold">PHP</span>
-              </div>
-              <div className="tech-quick-badge">
-                <SiExpress className="text-2xl" />
-                <span className="font-semibold">Express</span>
-              </div>
-              <div className="tech-quick-badge">
-                <SiLaravel className="text-2xl" />
-                <span className="font-semibold">Laravel</span>
-              </div>
-              <div className="tech-quick-badge">
-                <SiPostgresql className="text-2xl" />
-                <span className="font-semibold">PostgreSQL</span>
-              </div>
-              <div className="tech-quick-badge">
-                <SiMysql className="text-2xl" />
-                <span className="font-semibold">MySQL</span>
-              </div>
+            <div className="flex gap-4">
+              <Link href="#projects" className="px-8 py-3 bg-primary text-white font-medium rounded-lg hover:bg-blue-600 transition-all shadow-lg shadow-primary/25">
+                View Projects
+              </Link>
+              <Link href="https://github.com/ridvangulce" target="_blank" className="px-8 py-3 bg-bg-tertiary border border-border-subtle text-white font-medium rounded-lg hover:bg-bg-secondary transition-all flex items-center gap-2">
+                <FaGithub /> GitHub
+              </Link>
+              <Link href="https://www.linkedin.com/in/ridvangulce/" target="_blank" className="px-8 py-3 bg-bg-tertiary border border-border-subtle text-white font-medium rounded-lg hover:bg-bg-secondary transition-all flex items-center gap-2">
+                <FaLinkedin /> LinkedIn
+              </Link>
             </div>
+          </Section>
 
-            <Socials className="mt-6" />
-          </div>
+          {/* Spacer for 3D object visibility on desktop */}
+          <div className="hidden lg:block h-[500px]"></div>
         </div>
 
-        {/* Stats Section */}
-        <div className="mt-20 laptop:mt-30">
-          <StatsSection stats={data.stats} />
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-text-secondary">
+          <span className="text-sm font-mono">SCROLL</span>
         </div>
-
-        {/* About Section - Moved up */}
-        <div ref={aboutRef}>
-          <AboutSection aboutpara={data.aboutpara} />
-        </div>
-
-        {/* API Showcase Section */}
-        <div className="mt-10 laptop:mt-30">
-          <ApiShowcase />
-        </div>
-
-        {/* Projects Section */}
-        <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={workRef}>
-          <div className="flex justify-between">
-            <h1 className="text-2xl text-bold">Projects</h1>
-            <p>Found {data.projects.length} Projects</p>
-          </div>
-
-          <div className="mt-5 laptop:mt-10 grid grid-cols-2 tablet:grid-cols-2 laptop:grid-cols-3 gap-3 mob:gap-4">
-            {projectsToShow.map((project, index) => (
-              <WorkCard
-                key={project.id}
-                img={project.imageSrc}
-                name={project.title}
-                description={project.description}
-                onClick={() => window.open(project.url)}
-                className={`transition-all transform duration-500 ease-out opacity-0 translate-y-5 ${index < visibleProjects ? "opacity-100 translate-y-0" : ""
-                  }`}
-              />
-            ))}
-
-            {/* Skeleton loaders */}
-            {isLoading && Array.from({ length: data.projects.length - visibleProjects }).map((_, i) => (
-              <WorkCardSkeleton key={`skeleton-${i}`} />
-            ))}
-          </div>
-
-          {/* Eğer gösterilen proje sayısı toplam projelerden azsa "More Projects" butonunu göster */}
-          {visibleProjects < data.projects.length && (
-            <div className="flex justify-center mt-5">
-              {" "}
-              {/* Butonu ortalamak için flex kullanıyoruz */}
-              <button
-                className="px-4 py-2 rounded-lg text-lg font-bold transition-all duration-500 bg-text-primary text-bg-primary hover:bg-bg-secondary hover:text-text-primary hover:scale-105"
-                onClick={showMoreProjects}
-              >
-                Show More Projects
-              </button>
-            </div>
-          )}
-        </div>
-
-        {/* Expertise Section */}
-        <div className="mt-10 laptop:mt-30 p-2 laptop:p-0">
-          <div className="mt-5 tablet:m-10">
-            <TabExpertise services={data.services} />
-          </div>
-        </div>
-
-        {/* This button should not go into production */}
-        {process.env.NODE_ENV === "development" && (
-          <div className="fixed bottom-5 right-5">
-            <Link href="/edit">
-              <a>
-                <Button type="primary">Edit Data</Button>
-              </a>
-            </Link>
-          </div>
-        )}
-
-        <Footer />
       </div>
-    </div>
+
+      {/* Stats Row */}
+      <div className="border-y border-border-subtle bg-bg-secondary/30 backdrop-blur-sm">
+        <div className="container-custom py-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+          {[
+            { label: "Years Experience", value: "7+" },
+            { label: "Systems Architected", value: "20+" },
+            { label: "Uptime Maintained", value: "99.9%" },
+            { label: "Coffee Consumed", value: "∞" }
+          ].map((stat, i) => (
+            <div key={i} className="text-center">
+              <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
+              <div className="text-xs font-mono text-text-secondary uppercase tracking-widest">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Featured Case Studies */}
+      <Section id="case-studies" className="bg-bg-primary">
+        <div className="container-custom">
+          <div className="flex justify-between items-end mb-16">
+            <div>
+              <h2 className="text-3xl md:text-5xl font-bold mb-4">Selected Work</h2>
+              <p className="text-text-secondary max-w-xl">Deep dives into complex technical challenges and how I solved them.</p>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 gap-12">
+            {caseStudies.map((study, index) => (
+              <CaseStudyCard key={study.id} study={study} index={index} />
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* Experience Timeline */}
+      <Section id="experience" className="bg-bg-secondary/20">
+        <div className="container-custom">
+          <h2 className="text-3xl md:text-5xl font-bold mb-16">Experience</h2>
+          <div className="relative border-l border-border-subtle ml-4 md:ml-0 md:pl-8 space-y-12">
+            {experience.map((exp) => (
+              <div key={exp.id} className="relative pl-8 md:pl-0">
+                {/* Timeline Dot */}
+                <span className="absolute -left-[5px] md:-left-[9px] top-2 w-3 h-3 bg-primary rounded-full ring-4 ring-bg-secondary" />
+
+                <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8">
+                  <div className="md:col-span-3">
+                    <h3 className="text-xl font-bold text-white">{exp.company}</h3>
+                    <p className="text-text-secondary font-mono text-sm mt-1">{exp.period}</p>
+                  </div>
+                  <div className="md:col-span-9">
+                    <h4 className="text-lg text-primary mb-2 font-medium">{exp.role}</h4>
+                    <p className="text-text-secondary mb-4 leading-relaxed">{exp.description}</p>
+                    <ul className="space-y-2 mb-4 list-disc list-inside text-text-secondary text-sm">
+                      {exp.achievements.map((ach, i) => (
+                        <li key={i}>{ach}</li>
+                      ))}
+                    </ul>
+                    <div className="flex flex-wrap gap-2">
+                      {exp.tech.map(t => (
+                        <span key={t} className="text-xs px-2 py-1 bg-bg-tertiary rounded text-text-secondary border border-border-subtle">{t}</span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* Other Projects */}
+      <Section id="projects" className="bg-bg-primary">
+        <div className="container-custom">
+          <h2 className="text-3xl md:text-5xl font-bold mb-12">Projects</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {projects.map((project) => (
+              <Link href={project.link} key={project.id} target="_blank" className="group p-6 bg-bg-secondary border border-border-subtle rounded-xl hover:border-primary/50 transition-colors">
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="text-xl font-bold text-white group-hover:text-primary transition-colors">{project.title}</h3>
+                </div>
+                <p className="text-text-secondary text-sm mb-6 line-clamp-3">{project.description}</p>
+                <div className="flex flex-wrap gap-2">
+                  {project.tech.map(t => (
+                    <span key={t} className="text-xs text-text-secondary font-mono">#{t}</span>
+                  ))}
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* Footer / Contact */}
+      <Section className="py-20 text-center">
+        <h2 className="text-4xl md:text-6xl font-bold mb-8">Let&apos;s build something scalable.</h2>
+        <Link href="mailto:contact@example.com" className="inline-block px-8 py-4 bg-white text-black font-bold rounded-lg hover:scale-105 transition-transform">
+          Get in Touch
+        </Link>
+        <div className="flex justify-center gap-6 mt-12 text-2xl text-text-secondary">
+          <Link href="#" className="hover:text-white transition-colors"><FaGithub /></Link>
+          <Link href="#" className="hover:text-white transition-colors"><FaLinkedin /></Link>
+          <Link href="#" className="hover:text-white transition-colors"><FaTwitter /></Link>
+        </div>
+      </Section>
+
+    </Layout>
   );
 }
