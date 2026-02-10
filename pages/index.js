@@ -80,7 +80,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className={`relative overflow-x-hidden ${data.showCursor && "cursor-none"}`}>
+    <div className={`relative ${data.showCursor && "cursor-none"}`}>
       {data.showCursor && <Cursor />}
       <Head>
         <title>{data.resume_name}</title>
