@@ -663,5 +663,14 @@ body {
     padding: 3rem;
     min-height: 350px;
   }
+
+  .tech-quick-badges {
+    gap: 8px;
+  }
+
+  .tech-quick-badge {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
 }
 
