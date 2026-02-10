@@ -4,7 +4,7 @@ import React from "react";
 const WorkCard = ({ img, name, description, onClick, className }) => {
   return (
     <div
-      className={`glass overflow-hidden rounded-xl p-3 mob:p-4 laptop:p-4 first:ml-0 link flex flex-col transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:border-primary/30 group ${className}`}
+      className={`glass overflow-hidden rounded-xl p-3 mob:p-4 laptop:p-4 first:ml-0 link flex flex-col transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:border-primary/30 group cursor-pointer ${className}`}
       onClick={onClick}
     >
       <div

@@ -65,15 +65,12 @@ const StatCard = ({ number, label, icon, description }) => {
 
   return (
     <div ref={cardRef} className="stat-card group">
-      <div className="text-4xl mb-4 transition-transform group-hover:scale-110">
-        {getIcon()}
-      </div>
       <div className="stat-number">
         {hasAnimated ? count : 0}{number.replace(/\d/g, '')}
       </div>
       <div className="stat-label font-semibold">{label}</div>
       {description && (
-        <p className="text-sm text-text-secondary mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
+        <p className="text-xs mob:text-sm text-text-secondary mt-1 mob:mt-2 opacity-70 mob:opacity-0 mob:group-hover:opacity-100 transition-opacity">
           {description}
         </p>
       )}
@@ -87,11 +84,12 @@ const StatsSection = ({ stats }) => {
       <h2 className="text-xl mob:text-2xl laptop:text-3xl font-bold text-center mb-2">
         Impact & Experience
       </h2>
-      <p className="text-center text-text-secondary mb-8">
+      <p className="text-center text-text-secondary mb-6 mob:mb-8 text-sm mob:text-base">
         Building production-grade systems
       </p>
 
-      <div className="stats-grid">
+      {/* Mobile: Horizontal scroll, Desktop: Grid */}
+      <div className="stats-grid-mobile laptop:stats-grid">
         {stats.map((stat, index) => (
           <StatCard
             key={index}

@@ -35,26 +35,50 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  /* Scroll behavior handled by JavaScript for better performance */
+  height: 100%;
+  /* Reserve space for scrollbar to prevent content shift */
+  scrollbar-gutter: stable;
 }
 
 * {
   font-family: "Inter", sans-serif;
 }
 
+/* Scroll Performance Optimizations */
+* {
+  /* Reduce repaints during scroll */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Enable smooth scrolling on touch devices */
+body {
+  -webkit-overflow-scrolling: touch;
+}
+
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
   transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100%;
+  position: relative;
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
-/* Glassmorphism Utilities */
+/* Glassmorphism Utilities - Optimized for Performance */
 .glass {
   background: var(--glass-bg);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(8px); /* Reduced from 12px for better performance */
+  -webkit-backdrop-filter: blur(8px);
   border: 1px solid var(--glass-border);
   box-shadow: var(--glass-shadow);
+  /* GPU acceleration and performance optimization */
+  transform: translateZ(0);
+  will-change: transform; /* Hint to browser for optimization */
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .glass-hover:hover {
@@ -74,7 +98,7 @@ body {
 .gradient-circle {
   position: absolute;
   pointer-events: none;
-  z-index: 100;
+  z-index: 0; /* Fixed: was 100, causing scroll issues */
   top: -100px;
   height: 300px;
   width: 300px;
@@ -82,20 +106,24 @@ body {
   filter: blur(60px);
   background: radial-gradient(circle, var(--accent-primary) 0%, rgba(168, 85, 247, 0) 70%);
   animation: float 10s infinite ease-in-out;
+  /* GPU acceleration */
+  transform: translateZ(0);
 }
 
 .gradient-circle-bottom {
   position: absolute;
   pointer-events: none;
-  z-index: 100;
+  z-index: 0; /* Fixed: was 100, causing scroll issues */
   bottom: -100px;
-  right: -50px;
+  right: 0; /* Fixed: was -50px, causing horizontal scroll */
   height: 400px;
   width: 400px;
   opacity: 0.4;
   filter: blur(80px);
   background: radial-gradient(circle, var(--accent-secondary) 0%, rgba(99, 102, 241, 0) 70%);
   animation: float 12s infinite ease-in-out reverse;
+  /* GPU acceleration */
+  transform: translateZ(0);
 }
 
 @keyframes float {
@@ -196,13 +224,13 @@ body {
 
 .stat-number {
   animation: count-up 0.6s ease-out;
-  font-size: 3rem;
+  font-size: 3rem; /* Desktop size */
   font-weight: 700;
   color: var(--accent-primary);
 }
 
 .stat-label {
-  font-size: 1rem;
+  font-size: 1rem; /* Desktop size */
   color: var(--text-secondary);
   margin-top: 0.5rem;
 }
@@ -266,7 +294,7 @@ body {
   display: inline-block;
   padding: 6px 16px;
   background: var(--glass-bg);
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(8px); /* Reduced for performance */
   border: 1px solid var(--glass-border);
   color: var(--text-primary);
   border-radius: 20px;
@@ -315,10 +343,13 @@ body {
   gap: 8px;
   padding: 8px 16px;
   background: var(--glass-bg);
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(8px); /* Reduced for performance */
   border: 1px solid var(--glass-border);
   border-radius: 12px;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  /* GPU acceleration and performance */
+  transform: translateZ(0);
+  will-change: transform;
 }
 
 .tech-quick-badge:hover {
@@ -341,20 +372,78 @@ body {
 }
 
 .stats-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 2rem;
   margin-top: 2rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stats-grid .stat-card {
+  flex: 0 1 300px; /* Fixed width with some flexibility */
+}
+
+/* Ensure desktop uses grid layout */
+@media (min-width: 1024px) {
+  .stats-grid-mobile {
+    display: flex !important;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: visible;
+    scroll-snap-type: none;
+    padding-bottom: 0;
+  }
+  
+  .stats-grid-mobile .stat-card {
+    flex: 0 1 300px;
+    scroll-snap-align: none;
+  }
+}
+
+/* Mobile horizontal scroll for stats */
+.stats-grid-mobile {
+  display: flex;
+  gap: 0.75rem; /* Tighter gap on mobile */
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 1rem;
+  margin-top: 1rem; /* Reduced from 1.5rem */
+}
+
+.stats-grid-mobile .stat-card {
+  flex: 0 0 200px; /* Much smaller cards on mobile - was 280px */
+  scroll-snap-align: start;
+}
+
+/* Hide scrollbar but keep functionality */
+.stats-grid-mobile::-webkit-scrollbar {
+  display: none;
+}
+
+.stats-grid-mobile {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .stat-card {
   background: var(--glass-bg);
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(8px);
   border: 1px solid var(--glass-border);
   border-radius: 16px;
-  padding: 2rem;
+  padding: 2rem; /* Desktop padding */
   text-align: center;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  transform: translateZ(0);
+  will-change: transform;
 }
 
 .stat-card:hover {
@@ -377,12 +466,15 @@ body {
 
 .api-endpoint-card {
   background: var(--glass-bg);
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(8px); /* Reduced for performance */
   border: 1px solid var(--glass-border);
   border-radius: 12px;
   padding: 1.5rem;
   font-family: 'Monaco', 'Courier New', monospace;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  /* GPU acceleration and performance */
+  transform: translateZ(0);
+  will-change: transform;
 }
 
 .api-endpoint-card:hover {
@@ -390,36 +482,186 @@ body {
   transform: translateX(4px);
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments - Mobile First UX */
 @media (max-width: 768px) {
   .hero-title {
     font-size: 2.5rem;
   }
 
-  .stats-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+  /* Stats Section - Compact mobile */
+  .stats-section {
+    padding: 1.5rem 0;
   }
 
+  .stat-card {
+    padding: 0.875rem; /* Much smaller - was 1.25rem */
+    border-radius: 10px; /* Smaller radius */
+  }
+
+  .stat-number {
+    font-size: 2rem; /* Smaller - was 2.5rem */
+    margin-bottom: 0.25rem;
+  }
+
+  .stat-label {
+    font-size: 0.75rem; /* Smaller - was 0.875rem */
+    margin-top: 0.25rem;
+  }
+
+  /* API Showcase - Compact mobile */
+  .api-showcase {
+    padding: 1.5rem 0;
+  }
+
+  .api-examples {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .api-endpoint-card {
+    padding: 0.875rem;
+    border-radius: 8px;
+  }
+
+  .http-method {
+    padding: 2px 6px;
+    font-size: 9px;
+  }
+
+  /* Tech badges */
+  .tech-quick-badges {
+    gap: 6px;
+  }
+
+  .tech-quick-badge {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+}
+
+/* Tablet optimization */
+@media (min-width: 769px) and (max-width: 1023px) {
   .stat-card {
     padding: 1.5rem;
   }
 
   .stat-number {
-    font-size: 2.25rem;
+    font-size: 2.5rem;
   }
 
-  .api-examples {
-    grid-template-columns: 1fr;
+  .stat-label {
+    font-size: 0.875rem;
+  }
+}
+
+
+/* Expertise Tab Section */
+.expertise-section {
+  padding: 2rem 0;
+}
+
+.expertise-tabs {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.expertise-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.expertise-tab-button {
+  flex: 0 0 auto;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  scroll-snap-align: start;
+}
+
+.expertise-tab-button:hover {
+  color: var(--text-primary);
+  border-color: var(--accent-primary);
+  transform: translateY(-2px);
+}
+
+.expertise-tab-button.active {
+  color: var(--text-primary);
+  background: var(--accent-primary);
+  border-color: var(--accent-primary);
+  box-shadow: 0 4px 12px rgba(168, 85, 247, 0.3);
+}
+
+.expertise-tab-content {
+  background: var(--glass-bg);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 1.5rem;
+  min-height: 250px;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 768px) {
+  .expertise-tabs {
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow-x: visible;
+    gap: 0.75rem;
   }
 
-  .tech-quick-badges {
-    gap: 8px;
+  .expertise-tab-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
   }
 
-  .tech-quick-badge {
-    padding: 6px 12px;
-    font-size: 14px;
+  .expertise-tab-content {
+    padding: 2rem;
+    min-height: 300px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .expertise-section {
+    padding: 3rem 0;
+  }
+
+  .expertise-tabs {
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .expertise-tab-button {
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+  }
+
+  .expertise-tab-content {
+    padding: 3rem;
+    min-height: 350px;
   }
 }
 
