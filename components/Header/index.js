@@ -20,7 +20,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
 
   return (
     <>
-      <Popover className="block tablet:hidden mt-5">
+      <Popover className="block tablet:hidden mt-5 relative z-50">
         {({ open }) => (
           <>
             <div className="flex items-center justify-between p-2 laptop:p-0">
@@ -66,54 +66,76 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               </div>
             </div>
             <Popover.Panel
-              className={`absolute right-0 z-10 w-11/12 p-4 ${theme === "dark" ? "bg-slate-800" : "bg-white"
-                } shadow-md rounded-md`}
+              className={`absolute left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-sm p-5 ${theme === "dark" ? "bg-slate-900" : "bg-white"
+                } shadow-2xl rounded-xl border ${theme === "dark" ? "border-slate-700" : "border-gray-200"}`}
             >
               {!isBlog ? (
-                <div className="grid grid-cols-1">
-                  <Button onClick={handleWorkScroll}>Work</Button>
-                  <Button onClick={handleAboutScroll}>About</Button>
+                <div className="flex flex-col gap-2">
+                  <button
+                    onClick={handleWorkScroll}
+                    className={`w-full py-3 px-4 text-left rounded-lg font-medium transition-all duration-200 ${theme === "dark" ? "text-white hover:bg-white/10" : "text-gray-800 hover:bg-gray-100"}`}
+                  >
+                    Work
+                  </button>
+                  <button
+                    onClick={handleAboutScroll}
+                    className={`w-full py-3 px-4 text-left rounded-lg font-medium transition-all duration-200 ${theme === "dark" ? "text-white hover:bg-white/10" : "text-gray-800 hover:bg-gray-100"}`}
+                  >
+                    About
+                  </button>
                   {showBlog && (
-                    <Button onClick={() => router.push("/blog")}>Blog</Button>
+                    <button
+                      onClick={() => router.push("/blog")}
+                      className={`w-full py-3 px-4 text-left rounded-lg font-medium transition-all duration-200 ${theme === "dark" ? "text-white hover:bg-white/10" : "text-gray-800 hover:bg-gray-100"}`}
+                    >
+                      Blog
+                    </button>
                   )}
                   {showResume && (
-                    <Button
-                      onClick={() =>
-                        router.push('/resume')
-                      }
+                    <button
+                      onClick={() => router.push('/resume')}
+                      className={`w-full py-3 px-4 text-left rounded-lg font-medium transition-all duration-200 ${theme === "dark" ? "text-white hover:bg-white/10" : "text-gray-800 hover:bg-gray-100"}`}
                     >
                       Resume
-                    </Button>
+                    </button>
                   )}
-
-                  <Button
+                  <button
                     onClick={() => window.open("mailto:ridvangulce@gmail.com")}
+                    className={`w-full py-3 px-4 text-left rounded-lg font-medium transition-all duration-200 ${theme === "dark" ? "text-white hover:bg-white/10" : "text-gray-800 hover:bg-gray-100"}`}
                   >
                     Contact
-                  </Button>
+                  </button>
                 </div>
               ) : (
-                <div className="grid grid-cols-1">
-                  <Button onClick={() => router.push("/")} classes="first:ml-1">
+                <div className="flex flex-col gap-2">
+                  <button
+                    onClick={() => router.push("/")}
+                    className={`w-full py-3 px-4 text-left rounded-lg font-medium transition-all duration-200 ${theme === "dark" ? "text-white hover:bg-white/10" : "text-gray-800 hover:bg-gray-100"}`}
+                  >
                     Home
-                  </Button>
+                  </button>
                   {showBlog && (
-                    <Button onClick={() => router.push("/blog")}>Blog</Button>
+                    <button
+                      onClick={() => router.push("/blog")}
+                      className={`w-full py-3 px-4 text-left rounded-lg font-medium transition-all duration-200 ${theme === "dark" ? "text-white hover:bg-white/10" : "text-gray-800 hover:bg-gray-100"}`}
+                    >
+                      Blog
+                    </button>
                   )}
                   {showResume && (
-                    <Button
+                    <button
                       onClick={() => router.push("/resume")}
-                      classes="first:ml-1"
+                      className={`w-full py-3 px-4 text-left rounded-lg font-medium transition-all duration-200 ${theme === "dark" ? "text-white hover:bg-white/10" : "text-gray-800 hover:bg-gray-100"}`}
                     >
                       Resume
-                    </Button>
+                    </button>
                   )}
-
-                  <Button
+                  <button
                     onClick={() => window.open("mailto:ridvangulce@gmail.com")}
+                    className={`w-full py-3 px-4 text-left rounded-lg font-medium transition-all duration-200 ${theme === "dark" ? "text-white hover:bg-white/10" : "text-gray-800 hover:bg-gray-100"}`}
                   >
                     Contact
-                  </Button>
+                  </button>
                 </div>
               )}
             </Popover.Panel>

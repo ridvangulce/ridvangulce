@@ -397,11 +397,29 @@ body {
   }
 
   .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .stat-card {
+    padding: 1.5rem;
+  }
+
+  .stat-number {
+    font-size: 2.25rem;
   }
 
   .api-examples {
     grid-template-columns: 1fr;
+  }
+
+  .tech-quick-badges {
+    gap: 8px;
+  }
+
+  .tech-quick-badge {
+    padding: 6px 12px;
+    font-size: 14px;
   }
 }
 
