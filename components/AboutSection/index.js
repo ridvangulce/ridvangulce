@@ -15,8 +15,8 @@ const AboutSection = ({ aboutpara }) => {
         {/* Content Grid */}
         <div className="grid laptop:grid-cols-12 gap-6 laptop:gap-8">
           {/* Main Text */}
-          <div className="laptop:col-span-8">
-            <p className="text-base mob:text-lg tablet:text-xl laptop:text-2xl leading-relaxed text-text-primary">
+          <div className="laptop:col-span-12">
+            <p className="text-lg tablet:text-xl laptop:text-2xl leading-relaxed text-text-primary">
               {aboutpara}
             </p>
           </div>
