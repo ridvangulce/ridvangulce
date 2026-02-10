@@ -55,6 +55,8 @@ body {
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--glass-border);
   box-shadow: var(--glass-shadow);
+  /* GPU acceleration for better performance */
+  transform: translateZ(0);
 }
 
 .glass-hover:hover {
@@ -82,6 +84,8 @@ body {
   filter: blur(60px);
   background: radial-gradient(circle, var(--accent-primary) 0%, rgba(168, 85, 247, 0) 70%);
   animation: float 10s infinite ease-in-out;
+  /* GPU acceleration */
+  transform: translateZ(0);
 }
 
 .gradient-circle-bottom {
@@ -96,6 +100,8 @@ body {
   filter: blur(80px);
   background: radial-gradient(circle, var(--accent-secondary) 0%, rgba(99, 102, 241, 0) 70%);
   animation: float 12s infinite ease-in-out reverse;
+  /* GPU acceleration */
+  transform: translateZ(0);
 }
 
 @keyframes float {
@@ -318,7 +324,9 @@ body {
   backdrop-filter: blur(12px);
   border: 1px solid var(--glass-border);
   border-radius: 12px;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  /* GPU acceleration */
+  transform: translateZ(0);
 }
 
 .tech-quick-badge:hover {
@@ -354,7 +362,9 @@ body {
   border-radius: 16px;
   padding: 2rem;
   text-align: center;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  /* GPU acceleration */
+  transform: translateZ(0);
 }
 
 .stat-card:hover {
@@ -382,7 +392,9 @@ body {
   border-radius: 12px;
   padding: 1.5rem;
   font-family: 'Monaco', 'Courier New', monospace;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  /* GPU acceleration */
+  transform: translateZ(0);
 }
 
 .api-endpoint-card:hover {
