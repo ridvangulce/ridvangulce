@@ -8,6 +8,7 @@ import TechStack from "../components/TechStack";
 import AboutSection from "../components/AboutSection";
 import StatsSection from "../components/StatsSection";
 import ApiShowcase from "../components/ApiShowcase";
+import TabExpertise from "../components/TabExpertise";
 import { useIsomorphicLayoutEffect } from "../utils";
 import { stagger } from "../animations";
 import Footer from "../components/Footer";
@@ -22,9 +23,9 @@ import data from "../data/portfolio.json";
 
 export default function Home() {
   //State
-  const [visibleProjects, setVisibleProjects] = useState(4);
+  const [visibleProjects, setVisibleProjects] = useState(6);
   const [projectsToShow, setProjectsToShow] = useState(
-    data.projects.slice(0, 4)
+    data.projects.slice(0, 6)
   );
   const [isLoading, setIsLoading] = useState(false);
 
@@ -79,7 +80,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className={`relative overflow-x-hidden ${data.showCursor && "cursor-none"}`}>
+    <div className={`relative ${data.showCursor && "cursor-none"}`}>
       {data.showCursor && <Cursor />}
       <Head>
         <title>{data.resume_name}</title>
@@ -205,15 +206,8 @@ export default function Home() {
 
         {/* Expertise Section */}
         <div className="mt-10 laptop:mt-30 p-2 laptop:p-0">
-          <h1 className="tablet:m-10 text-2xl text-bold">Expertise.</h1>
-          <div className="mt-5 tablet:m-10 grid grid-cols-1 laptop:grid-cols-2 gap-6">
-            {data.services.map((service, index) => (
-              <ServiceCard
-                key={index}
-                name={service.title}
-                description={service.description}
-              />
-            ))}
+          <div className="mt-5 tablet:m-10">
+            <TabExpertise services={data.services} />
           </div>
         </div>
 

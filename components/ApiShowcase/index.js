@@ -92,14 +92,14 @@ const ApiShowcase = () => {
 
   return (
     <section className="api-showcase p-2 laptop:p-0">
-      <div className="flex items-center gap-3 mb-2">
-        <div className="w-1 h-12 bg-gradient-to-b from-primary to-secondary rounded-full"></div>
-        <h2 className="text-2xl laptop:text-3xl font-bold">
+      <div className="flex items-center gap-2 mob:gap-3 mb-2">
+        <div className="w-1 h-8 mob:h-12 bg-gradient-to-b from-primary to-secondary rounded-full"></div>
+        <h2 className="text-xl mob:text-2xl laptop:text-3xl font-bold">
           API Design & Development<span className="gradient-text">.</span>
         </h2>
       </div>
 
-      <p className="text-text-secondary mb-8 ml-4">
+      <p className="text-sm mob:text-base text-text-secondary mb-6 mob:mb-8 ml-4">
         Sample API endpoints from production systems
       </p>
 

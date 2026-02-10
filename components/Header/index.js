@@ -53,12 +53,12 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   <img
                     className="h-5"
                     src={`/images/${!open
-                        ? mounted && theme === "dark"
-                          ? "menu-white.svg"
-                          : "menu.svg"
-                        : mounted && theme === "light"
-                          ? "cancel.svg"
-                          : "cancel-white.svg"
+                      ? mounted && theme === "dark"
+                        ? "menu-white.svg"
+                        : "menu.svg"
+                      : mounted && theme === "light"
+                        ? "cancel.svg"
+                        : "cancel-white.svg"
                       }`}
                     alt="Menu"
                   ></img>
