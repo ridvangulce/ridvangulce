@@ -23,15 +23,14 @@ I enjoy turning ideas into production-ready backends and continuously improving 
 ### Languages
 - JavaScript
 - PHP
-- C#
-
+- 
 ---
 
 ### Backend Frameworks & Runtime
 - Node.js
 - Express.js
 - Laravel
-
+  
 ---
 
 ### Databases
