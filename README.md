@@ -23,14 +23,11 @@ I enjoy turning ideas into production-ready backends and continuously improving 
 ### Languages
 - JavaScript
 - PHP
-- 
 ---
 
 ### Backend Frameworks & Runtime
 - Node.js
 - Express.js
-- Laravel
-  
 ---
 
 ### Databases
@@ -41,7 +38,8 @@ I enjoy turning ideas into production-ready backends and continuously improving 
 ---
 
 ### Frontend (when needed)
-- React
+- React.js
+- Next.js
 - AJAX
 
 ---
